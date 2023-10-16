@@ -1,0 +1,136 @@
+<!-- views/food_items.hbs -->
+<!--
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Food Website - Food Items</title>
+</head>
+<body>
+  <h1>Food Items</h1>
+  <ul>
+    {{#each foodItems}}
+    <li>
+      {{this.item_name}} - Rs.{{this.price}}
+      <form action="/cart/add" method="post">
+        <input type="hidden" name="foodItemId" value="{{this.menu_id}}">
+        <input type="number" name="quantity" value="1" min="1">
+        <button type="submit">Add to Cart</button>
+      </form>
+    </li>
+    {{/each}}
+  </ul>
+</body>
+</html>
+-->
+
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>FoodZen &mdash; Your favorite street food a click away</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="FoodZen website" />
+	<meta name="author" content="Aniket, Rajarsjhi and Neil" />
+
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,400italic,700italic|Merriweather:300,400italic,300italic,400,700italic' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="/css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="/css/icomoon.css">
+	<!-- Simple Line Icons -->
+	<link rel="stylesheet" href="/css/simple-line-icons.css">
+	<!-- Datetimepicker -->
+	<link rel="stylesheet" href="/css/bootstrap-datetimepicker.min.css">
+	<!-- Flexslider -->
+	<link rel="stylesheet" href="/css/flexslider.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="/css/bootstrap.css">
+
+	<link rel="stylesheet" href="/css/userLogged.css">
+
+
+	<!-- Modernizr JS -->
+	<script src="/js/modernizr-2.6.2.min.js"></script>
+
+	</head>
+	<body>
+	<center>
+		<blockquote>
+			<p>Welcome to <br>
+          <h1>{{this.restaurant}}</h1></p>
+		</blockquote>
+	
+
+		
+		<div>
+			  <h1>Food Items</h1>
+				<ul>
+					{{#each foodItems}}
+					<li>
+					{{this.item_name}} - Rs.{{this.price}}
+					<form action="/cart/add" method="post">
+						<input type="hidden" name="foodItemId" value="{{this.menu_id}}">
+						<input type="number" name="quantity" value="1" min="1">
+						<button type="submit">Add to Cart</button>
+					</form>
+					</li>
+					{{/each}}
+				</ul>
+		</div>
+	</center>
+
+
+
+	<div id="fh5co-footer">
+		<div class="container">
+			<div class="row row-padded">
+				<div class="col-md-12 text-center">
+					<p class="to-animate">&copy; 2023 FoodZen Developers <br> Designed by Aniket, Rajarshi and Neil
+					</p>
+					<p class="text-center to-animate"><a href="#" class="js-gotop">Go To Top</a></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 text-center">
+					<ul class="fh5co-social">
+						<li class="to-animate-2"><a href="https://www.facebook.com/login/"><i class="icon-facebook"></i></a></li>
+						<li class="to-animate-2"><a href="https://twitter.com/?lang=en"><i class="icon-twitter"></i></a></li>
+						<li class="to-animate-2"><a href="https://www.instagram.com/"><i class="icon-instagram"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- jQuery -->
+	<script src="/js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="/js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="/js/bootstrap.min.js"></script>
+	<!-- Bootstrap DateTimePicker -->
+	<script src="/js/moment.js"></script>
+	<script src="/js/bootstrap-datetimepicker.min.js"></script>
+	<!-- Waypoints -->
+	<script src="/js/jquery.waypoints.min.js"></script>
+	<!-- Stellar Parallax -->
+	<script src="/js/jquery.stellar.min.js"></script>
+
+	<!-- Flexslider -->
+	<script src="/js/jquery.flexslider-min.js"></script>
+	<script>
+		$(function () {
+	       $('#date').datetimepicker();
+	   });
+	</script>
+	<!-- Main JS -->
+	<script src="/js/userLogged.js"></script>
+
+	</body>
+</html>
+

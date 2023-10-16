@@ -1,0 +1,70 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <title>View Table</title>
+  <link rel="stylesheet" href="/css/table.css">
+</head>
+<body>
+  <h1>Menu</h1>
+  <table>
+    <thead>
+        <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#data}}
+        <tr>
+        <td>{{this.item_name}}</td>
+        <td>{{this.item_description}}</td>
+        <td>{{this.price}}</td>
+        </tr>
+        {{/data}}
+    </tbody>
+  </table>
+</body>
+</html>
+-->
+
+
+<html>
+<head>
+  <title>View Table</title>
+  <link rel="stylesheet" href="/css/table.css">
+</head>
+<body>
+ <div id="wrapper">
+  <h1>My Menu</h1>
+  
+  <table id="keywords" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+        <th>Item Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#data}}
+        <tr>
+        <td>{{this.menu_id}}</td>
+        <td>{{this.item_name}}</td>
+        <td>{{this.item_description}}</td>
+        <td>{{this.price}}</td>
+        </tr>
+        {{/data}}
+    </tbody>
+  </table>
+ </div> 
+ <div class="container">
+  <center>
+      <a href="/add" class="btn btn-primary btn-outline" style="padding: 15px;">Add Items</a>
+      <a href="/edit" class="btn btn-primary btn-outline" style="padding: 15px;">Edit Items</a>
+			<a href="/delete" class="btn btn-primary btn-outline" style="padding: 15px;">Delete Items</a>
+    </center>
+ </div>
+ 
+</body>

@@ -1,0 +1,32 @@
+<html>
+<head>
+  <title>View Table</title>
+  <link rel="stylesheet" href="/css/table.css">
+</head>
+<body>
+ <div id="wrapper">
+  <h1>My Orders</h1>
+  
+  <table id="keywords" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+        <th>Order Id</th>
+        <th>User Email</th>
+        <th>Food Item Id</th>
+        <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#data}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.username}}</td>
+            <td>{{this.food_item_id}}</td>
+            <td>{{this.quantity}}</td>
+        </tr>
+        {{/data}}
+    </tbody>
+  </table>
+ </div> 
+</body>
+</html>

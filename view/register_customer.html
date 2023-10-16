@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/register_style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Register as Customer</div>
+    <div class="content">
+      <form action="/customer_register" name="myform1" onsubmit="return validateform()">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" name="username" id="username" placeholder="Enter your name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Address</span>
+            <input type="text" name="address" id="address" placeholder="Enter your username" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" name="email" id="email" placeholder="Enter your email" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" name="phonenumber" id="phonenumber" placeholder="Enter your number" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" name="password" id="password" placeholder="Enter your password" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" name="confirm_password" placeholder="Confirm your password" required>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+  <script>
+    function validateform() {
+          var username = document.myform1.username.value;
+          var address = document.myform1.address.value;
+          var email=document.myform1.email.value;
+          var phno=document.myform1.phonenumber.value;
+          var pass=document.myform1.password.value;
+          var confirm_pass=document.myform1.confirm_password.value;
+          if (username == null || username == " ") {
+          alert("Name can't be blank");
+          return false;
+          }
+          if (address == null || address == " ") {
+          alert("Address can't be blank");
+          return false;
+          }
+          if(phno == " " || phno.length!=10){
+            alert("Invalid Phone Number");
+            return false;
+          }
+        if (pass == null || pass == " ") {
+          alert("Password can't be blank");
+          return false;
+          }
+        if(pass != confirm_pass){
+          alert("Password and confirm password needs to be same");
+          return false;
+        }
+        }
+      </script>
+</body>
+</html>

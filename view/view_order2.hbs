@@ -1,0 +1,42 @@
+<html>
+<head>
+  <title>View Table</title>
+  <link rel="stylesheet" href="/css/table.css">
+</head>
+<body>
+ <div id="wrapper">
+  <h1>My Orders</h1>
+  
+  <table id="keywords" cellspacing="0" cellpadding="0">
+    <thead>
+        <tr>
+        <th>Order Id</th>
+        <th>User Name</th>
+        <th>Address</th>
+        <th>Food Item Id</th>
+        <th>Quantity</th>
+        <th>Date and Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#data}}
+        <tr>
+            <td>{{this.id}}</td>
+            <td>{{this.username}}</td>
+            <td>{{this.address}}</td>
+            <td>{{this.food_item_id}}</td>
+            <td>{{this.quantity}}</td>
+            <td>{{this.date_time}}</td>
+        </tr>
+        {{/data}}
+    </tbody>
+  </table>
+ </div> 
+ <div class="container">
+  <center>
+    <a href="/view_menu_chef" class="btn btn-primary btn-outline" style="padding: 15px;">View Menu Items</a>
+      <a href="/chefLogged" class="btn btn-primary btn-outline" style="padding: 15px;">Back to Chef Page</a>
+    </center>
+ </div>
+</body>
+</html>

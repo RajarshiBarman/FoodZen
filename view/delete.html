@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/style1.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Delete item</div>
+    <div class="content">
+      <form action="/delete_items">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Restaurant Name</span>
+            <input type="text" name="rest_name" id="rest_name" placeholder="Enter restaurant name" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Item Name to be deleted</span>
+            <input type="text" name="item_name" id="item_name" placeholder="Enter item name" required>
+          </div>
+        <div class="button">
+          <input type="submit" value="Delete item">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
