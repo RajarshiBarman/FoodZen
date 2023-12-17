@@ -30,6 +30,7 @@ app.get("/userlogged2", (req, res) => {
     res.sendFile(__dirname + "/view/view1.html");  
 })*/
 
+
 app.get("/",function (req,res) {
     res.sendFile(__dirname + "/view/index.html");  
 })
